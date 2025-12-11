@@ -1,0 +1,127 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 08, 2024 at 08:08 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `smartfarmer`
+--
+all the file php file,database name = smartfarmer
+android project=SmartFarmer
+run atabase commad at xammp sql 
+save php file htdocs in xammp
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `price` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`) VALUES
+(13, 'TOMATO ', 'Aid Immune Function. Tomato juice is a source of vitamin C and beta-carotene, antioxidants that help support your immune system..\r\nHere we tell Current Market Price of 1kg Tomatoes.', 80.00),
+(14, 'CHILLIES ', 'Green Chillies are rich in vitamin C, with 109.1 mg per 100 grams. \r\nHere we tell Current Market Price of 1kg Chillies.', 60.00),
+(15, 'POTATO', ' In vitamin C, which is an antioxidant. Potatoes were a life-saving food source in early times because the vitamin C prevented scurvy. \r\nHere we tell Current Market Price of 1kg Potatoes.', 40.00),
+(16, 'Fenugreek ', 'Fenugreek is native to the Mediterranean, Europe, and Asia. Fenugreek seems to slow sugar absorption in the stomach and stimulate insulin. \nHere we tell market price Fenugreek.', 20.00),
+(17, 'ONION ', 'Onions are highly nutritious vegetables that may have several benefits, including improved heart health, better blood sugar regulation, and increased bone density.\nHere we tell market price of 1kg Onion.', 30.00),
+(23, 'Sweet Potatoes ', 'Sweet potatoes are nutritious, boosting immunity and aiding digestion.\nHere we tell the market price of 1 kg sweet potatoes ', 100.00),
+(24, 'French Beans', 'French beans are low in calories, rich in vitamins, high in fiber, and provide antioxidants, folate, and iron.\r\nHere we tell market price of 1kg French Beans', 80.00),
+(25, 'Coriander ', 'Coriander is rich in antioxidants, vitamins A, C, and K, and supports digestion and heart health.\nHere we tell the market price of Coriander ', 20.00),
+(26, 'Corn', 'Corn is high in fiber, vitamins, and antioxidants, supporting digestion and providing essential nutrients for energy and overall health.\nHere we tell market price of 1kg Corn', 200.00),
+(27, 'Garlic ', 'Garlic boosts immunity, reduces blood pressure, and supports heart health.\nHere we tell the market price of 1kg Garlic ', 350.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mobileno` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `mobileno`, `password`) VALUES
+(4, 'Sakshi Shinde ', 'sakshi@gmail.com', '9860194530', '123'),
+(5, 'Shravi Shinde', 'shravi@gmail.com', '9860194365', '123'),
+(6, 'Sushama Shinde', 'sushama@gmail.com', '8530313761', '123'),
+(7, 'Shreya Shinde', 'shreya@gmail.com', '9175706139', '123'),
+(9, 'Rajashree Yadav', 'raj@gmail.com', '3698563216', '123'),
+(10, 'Rushikesh Pawar', 'rushi@gmail.com', '4587369126', '123'),
+(11, 'Tanushka Kasabe', 'tanu@gmail.com', '6975843612', '123'),
+(12, 'Riya Rahate', 'riya@gmail.com', '2319875469', '123'),
+(14, 'Isha Pawar', 'isha@gmail.com', '3967512469', '123'),
+(15, 'Trupti Satape', 'trupti@gmail.com', '2875461954', '123'),
+(16, 'Vedika Mohite', 'vedika@gmail.com', '3945126780', '123'),
+(17, 'Madhura Karande', 'madhura@gmail.com', '2254845469', '123'),
+(18, 'Tanaya Udugde', 'tanaya@gmail.com', '7854213964', '123'),
+(19, 'Aradhya Patil', 'aru@gmail.com', '4521369875', '123'),
+(20, 'Ovi Shinde', 'ovi@gmail.com', '1697548239', '123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
